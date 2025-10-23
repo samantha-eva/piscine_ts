@@ -1,4 +1,3 @@
-// --- Fonction générique avec contrainte ---
 // T doit être un type qui possède une propriété "length"
 function premierElement<T extends { length: number }>(tableau: T): any {
   if (tableau.length > 0) {
@@ -13,17 +12,14 @@ function premierElement<T extends { length: number }>(tableau: T): any {
 
 // --- Tests ---
 
-// Tableau non vide
 const nombres = [10, 20, 30];
 const premierNombre = premierElement(nombres);
 console.log("Premier nombre :", premierNombre);
 
-// Tableau vide
 const vide: number[] = [];
 const premierVide = premierElement(vide);
 console.log("Premier élément (vide) :", premierVide);
 
-// Tableau d’objets
 const utilisateurs = [
   { id: 1, nom: "Alice" },
   { id: 2, nom: "Bob" },
