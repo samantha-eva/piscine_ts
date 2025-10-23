@@ -4,15 +4,14 @@ interface Adresse {
   ville: string;
 }
 
-// Interface Personne (avec propriétés avancées)
+// Interface Personne
 interface Personne {
-  readonly id: number; // propriété en lecture seule
+  readonly id: number;
   nom: string;
   age: number;
-  adresse?: Adresse; // propriété optionnelle et imbriquée
+  adresse?: Adresse;
 }
 
-// --- Fonction d'affichage avancée ---
 function afficherPersonneAvancee(personne: Personne): void {
   if (personne.adresse) {
     console.log(
